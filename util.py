@@ -16,12 +16,13 @@ with open('example_solution.csv', mode='r', newline='') as solution:
 	
 	# read solution sequence
 	reader = csv.reader(solution)
+
 	for row in reader:
 		sol.append(int(row[0]))
-		
+
 	#reordering solution sequence
 	idx = sol.index(0)
-	
+
 	front = sol[idx:]
 	back = sol[0:idx]
 	
@@ -29,7 +30,8 @@ with open('example_solution.csv', mode='r', newline='') as solution:
 	
 	# expand 0 city (start) for simplicity
 	sol.append(int(0))
-	
+
+
 # 2. get TSP city map
 with open('2024_AI_TSP.csv', mode='r', newline='') as tsp:
 	# read TSP city map
